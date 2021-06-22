@@ -11,19 +11,20 @@ for (let generalList of document.querySelectorAll(".card-container.general-list"
     generalList.querySelector(".add-button").addEventListener("click", function() { addGeneralItem(); });
 }
 
-// Selects the add button inside the template for dynamically added lists.
-const TEMPLATE_ADD_BUTTON = document.getElementById("template-list-general").content.querySelector(".add-button");
-
 // Ensures not to overwrite other onclick events.
-if (TEMPLATE_ADD_BUTTON.getAttribute(onclick) != null) {
-    TEMPLATE_ADD_BUTTON.setAttribute(
-        "onclick",
-        TEMPLATE_ADD_BUTTON.getAttribute(onclick) + "addGeneralItem(this)"
-    );
-} else {
-    TEMPLATE_ADD_BUTTON.setAttribute(
-        "onclick",
-        "addGeneralItem(this)"
-    );
+{
+    // Selects the add button inside the template for dynamically added lists.
+    const TEMPLATE_ADD_BUTTON = document.getElementById("template-list-general").content.querySelector(".add-button");
+    if (TEMPLATE_ADD_BUTTON.getAttribute(onclick) != null) {
+        TEMPLATE_ADD_BUTTON.setAttribute(
+            "onclick",
+            TEMPLATE_ADD_BUTTON.getAttribute(onclick) + "addGeneralItem(this)"
+        );
+    } else {
+        TEMPLATE_ADD_BUTTON.setAttribute(
+            "onclick",
+            "addGeneralItem(this)"
+        );
+    }
 }
 
