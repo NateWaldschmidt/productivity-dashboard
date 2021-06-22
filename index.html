@@ -10,54 +10,52 @@
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
 
-    <script src="add-general-item.js"></script>
-
     <title>Productivity Dashboard</title>
 </head>
 <body>
     <header>
-        
+        <button id="add-general-list">
+            Add New General List
+        </button>
     </header>
 
     <main>
-        <button>
-            Add New General List
-        </button>
-
         <template id="template-li-general">
             <li>
                 <div>
                     <input type="checkbox">
-                    <label for="" contenteditable>New Item</label>
+                    <label contenteditable>Additional Item</label>
                 </div>
             </li>
         </template>
 
-        <div class="card-container">
-            <div>
-                <h3>
-                    Clean Up House
-                </h3>
-                <h4>
-                    0%
-                </h4>
-            </div>
-            
-            <ul>
+        <template id="template-list-general">
+            <div class="card-container general-list">
+                <div>
+                    <h3></h3>
+                    <button class="add-button">
+                        <span class="material-icons-round">
+                            add
+                        </span>
+                    </button>
+                    <h4 class="percent-completed">
+                        0%
+                    </h4>
+                </div>
                 
-            </ul>
-
-            <button onclick="addGeneralItem(this.parentElement);">
-                <span class="material-icons-round">
-                    edit
-                </span>
-            </button>
-            <!-- <input type="color"> -->
-        </div>
+                <ul></ul>
+            </div>
+        </template>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 </body>
+<!-- Adds functionality to Add General Lists -->
+<script src="add-general-list.js"></script>
+
+<!-- Adds functionality to Add buttons -->
+<script src="add-general-item.js"></script>
+
+<!-- Adds functionality to Percent Completed Elements -->
+<script src="percent-completed.js"></script>
 </html>
