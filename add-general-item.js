@@ -3,3 +3,8 @@ function addGeneralItem(card) {
     const DUPLICATE = TEMPLATE.content.cloneNode(true);
     card.querySelector("ul").appendChild(DUPLICATE);
 }
+
+// Adds the function call to all of the add buttons.
+for (let generalList of document.querySelectorAll(".card-container.general-list")) {
+    generalList.querySelector(".add-button").onclick = function() { addGeneralItem(generalList) };
+}
