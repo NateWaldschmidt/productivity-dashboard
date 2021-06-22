@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
+
+.card-container {
+    $primary-color:   #a000df;
+    background-color: rgba($primary-color, 0.1);
+    border-radius:    1rem;
+    box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
+
+    font-family: 'Sarabun', sans-serif;
+
+    display:   flex;
+    flex-flow: column wrap;
+
+    max-width: 30rem;
+    padding:   1rem;
+
+    div {
+        display:         flex;
+        align-items:     center;
+        justify-content: space-between;
+
+        h3 {
+            color:           $primary-color;
+            font-size:       1.5rem;
+            font-weight:     800;
+            text-transform:  uppercase;
+    
+            margin-bottom: 0.25rem;
+        }
+
+        h4 {
+            $percentage-color: rgb(221, 32, 19);
+            color:   $percentage-color;
+            font-size: 0.9rem;
+
+            background-color: rgba($percentage-color, 0.15);
+            border-radius: .5rem;
+            border: 0.2rem solid $percentage-color;
+
+            padding: 0 0.75rem 0.1rem;
+        }
+    }
+
+    ul {
+        list-style:  none;
+        padding:     0;
+        margin-left: 1rem;
+
+        font-weight: 800;
+        font-size:   1.1rem;
+        text-transform: capitalize;
+
+        li {
+            div {
+                display: flex;
+                justify-content: flex-start;
+            
+                input[type=checkbox] {
+                    appearance:       none;
+
+                    background-color: transparent;
+                    border-radius:    500rem;
+                    border:           .2rem solid $primary-color;
+
+                    position:     relative;
+                    top:          0.1rem;
+                    padding:      0.5rem;
+                    margin-right: 0.5rem;
+                    
+                    transition: background-color ease 300ms, filter ease 200ms;
+
+                    &:active {
+                        filter: brightness(80%);
+                    }
+                    &:checked {
+                        background-color: rgba($primary-color, 0.5);
+                    }
+                }
+
+                label {
+                    color: $primary-color;
+                    outline: none;
+                }
+            }
+        }
+    }
+
+    button {
+        align-self: flex-end;
+        color:      $primary-color;
+
+        border:     none;
+        background: none;
+
+        position:  relative;
+        top:       0.5rem;
+        left:      0.5rem;
+        max-width: 5rem;
+    }
+
+    * {
+        margin: 0;
+    }
+}
