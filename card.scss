@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
 
 .card-container {
-    $primary-color:   #a000df;
+    $primary-color:   #df6400;
     background-color: rgba($primary-color, 0.1);
     border-radius:    1rem;
     box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
@@ -52,8 +52,10 @@
 
         li {
             div {
-                display: flex;
+                display:         flex;
                 justify-content: flex-start;
+                margin-bottom:   0.5rem;
+                margin-top:      0.5rem;
             
                 input[type=checkbox] {
                     appearance:       none;
@@ -96,6 +98,8 @@
         top:       0.5rem;
         left:      0.5rem;
         max-width: 5rem;
+
+        user-select: none;
     }
 
     * {

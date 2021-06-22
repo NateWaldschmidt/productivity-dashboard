@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap");
 .card-container {
-  background-color: rgba(160, 0, 223, 0.1);
+  background-color: rgba(223, 100, 0, 0.1);
   border-radius: 1rem;
-  -webkit-box-shadow: 5px 5px 15px rgba(160, 0, 223, 0.07);
-          box-shadow: 5px 5px 15px rgba(160, 0, 223, 0.07);
+  -webkit-box-shadow: 5px 5px 15px rgba(223, 100, 0, 0.07);
+          box-shadow: 5px 5px 15px rgba(223, 100, 0, 0.07);
   font-family: 'Sarabun', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,7 +29,7 @@
 }
 
 .card-container div h3 {
-  color: #a000df;
+  color: #df6400;
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -61,6 +61,8 @@
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .card-container ul li div input[type=checkbox] {
@@ -69,7 +71,7 @@
           appearance: none;
   background-color: transparent;
   border-radius: 500rem;
-  border: 0.2rem solid #a000df;
+  border: 0.2rem solid #df6400;
   position: relative;
   top: 0.1rem;
   padding: 0.5rem;
@@ -86,24 +88,28 @@
 }
 
 .card-container ul li div input[type=checkbox]:checked {
-  background-color: rgba(160, 0, 223, 0.5);
+  background-color: rgba(223, 100, 0, 0.5);
 }
 
 .card-container ul li div label {
-  color: #a000df;
+  color: #df6400;
   outline: none;
 }
 
 .card-container button {
   -ms-flex-item-align: end;
       align-self: flex-end;
-  color: #a000df;
+  color: #df6400;
   border: none;
   background: none;
   position: relative;
   top: 0.5rem;
   left: 0.5rem;
   max-width: 5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .card-container * {
