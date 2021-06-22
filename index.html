@@ -4,9 +4,60 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <link rel="stylesheet" href="css/card.css">
+
+    <!-- Google Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+
+    <script src="add-general-item.js"></script>
+
+    <title>Productivity Dashboard</title>
 </head>
 <body>
-    
+    <header>
+        
+    </header>
+
+    <main>
+        <button>
+            Add New General List
+        </button>
+
+        <template id="template-li-general">
+            <li>
+                <div>
+                    <input type="checkbox">
+                    <label for="" contenteditable>New Item</label>
+                </div>
+            </li>
+        </template>
+
+        <div class="card-container">
+            <div>
+                <h3>
+                    Clean Up House
+                </h3>
+                <h4>
+                    0%
+                </h4>
+            </div>
+            
+            <ul>
+                
+            </ul>
+
+            <button onclick="addGeneralItem(this.parentElement);">
+                <span class="material-icons-round">
+                    edit
+                </span>
+            </button>
+            <!-- <input type="color"> -->
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>
