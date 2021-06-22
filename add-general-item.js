@@ -18,7 +18,7 @@ for (let generalList of document.querySelectorAll(".card-container.general-list"
     if (TEMPLATE_ADD_BUTTON.getAttribute(onclick) != null) {
         TEMPLATE_ADD_BUTTON.setAttribute(
             "onclick",
-            TEMPLATE_ADD_BUTTON.getAttribute(onclick) + "addGeneralItem(this)"
+            TEMPLATE_ADD_BUTTON.getAttribute(onclick) + "; addGeneralItem(this);"
         );
     } else {
         TEMPLATE_ADD_BUTTON.setAttribute(
