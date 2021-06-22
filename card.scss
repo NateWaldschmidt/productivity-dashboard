@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
 
 .card-container {
-    $primary-color:   #df6400;
+    $primary-color:   #df005d;
     background-color: rgba($primary-color, 0.1);
     border-radius:    1rem;
     box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
@@ -13,6 +13,7 @@
 
     max-width: 30rem;
     padding:   1rem;
+    margin:    1rem;
 
     div {
         display:         flex;
@@ -28,16 +29,18 @@
             margin-bottom: 0.25rem;
         }
 
-        h4 {
-            $percentage-color: rgb(221, 32, 19);
+        .percent-completed {
+            $percentage-color: rgb(10, 134, 21);
             color:   $percentage-color;
             font-size: 0.9rem;
+            text-align: center;
 
             background-color: rgba($percentage-color, 0.15);
-            border-radius: .5rem;
-            border: 0.2rem solid $percentage-color;
+            border-radius:    .5rem;
+            border:           0.2rem solid $percentage-color;
 
-            padding: 0 0.75rem 0.1rem;
+            padding:    0 0.75rem 0.1rem;
+            min-width: 3rem;
         }
     }
 
@@ -87,7 +90,7 @@
         }
     }
 
-    button {
+    .add-button {
         align-self: center;
         color:      $primary-color;
 
@@ -98,6 +101,12 @@
         margin-right: auto;
 
         user-select: none;
+
+        transition: filter ease 100ms;
+
+        &:active {
+            filter: brightness(60%);
+        }
     }
 
     * {
