@@ -88,16 +88,14 @@
     }
 
     button {
-        align-self: flex-end;
+        align-self: center;
         color:      $primary-color;
 
         border:     none;
         background: none;
 
-        position:  relative;
-        top:       0.5rem;
-        left:      0.5rem;
-        max-width: 5rem;
+        max-width:    5rem;
+        margin-right: auto;
 
         user-select: none;
     }

@@ -97,15 +97,14 @@
 }
 
 .card-container button {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   color: #df6400;
   border: none;
   background: none;
-  position: relative;
-  top: 0.5rem;
-  left: 0.5rem;
   max-width: 5rem;
+  margin-right: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
