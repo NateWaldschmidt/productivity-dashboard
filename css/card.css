@@ -107,6 +107,14 @@
   color: #233D4D;
   cursor: text;
   outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.card-container ul li div .delete-button {
+  position: relative;
+  top: 2px;
 }
 
 .card-container button {

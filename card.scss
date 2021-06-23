@@ -91,6 +91,12 @@
                     color:   $primary-color;
                     cursor:  text;
                     outline: none;
+                    flex-grow: 1;
+                }
+
+                .delete-button {
+                    position: relative;
+                    top: 2px;
                 }
             }
         }
