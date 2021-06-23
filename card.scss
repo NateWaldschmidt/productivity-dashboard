@@ -25,7 +25,7 @@ $danger-color:       #D62246;
         align-items:     center;
         justify-content: space-between;
 
-        h3 {
+        .list-title {
             color:           $primary-card-color;
             font-size:       1.5rem;
             font-weight:     800;
@@ -64,7 +64,7 @@ $danger-color:       #D62246;
                 margin-bottom:   0.5rem;
                 margin-top:      0.5rem;
             
-                input[type=checkbox] {
+                .li-checkbox {
                     appearance:       none;
 
                     background-color: transparent;
@@ -89,7 +89,7 @@ $danger-color:       #D62246;
                     }
                 }
 
-                label {
+                .li-label {
                     color:   $primary-card-color;
                     cursor:  text;
                     outline: none;
