@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap");
 .card-container {
-  background-color: rgba(223, 0, 93, 0.1);
+  background-color: rgba(152, 0, 223, 0.1);
   border-radius: 1rem;
-  -webkit-box-shadow: 5px 5px 15px rgba(223, 0, 93, 0.07);
-          box-shadow: 5px 5px 15px rgba(223, 0, 93, 0.07);
+  -webkit-box-shadow: 5px 5px 15px rgba(152, 0, 223, 0.07);
+          box-shadow: 5px 5px 15px rgba(152, 0, 223, 0.07);
   font-family: 'Sarabun', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +12,11 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+  min-width: 15rem;
   max-width: 30rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 1rem;
   margin: 1rem;
 }
@@ -30,7 +34,7 @@
 }
 
 .card-container div h3 {
-  color: #df005d;
+  color: #9800df;
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -74,7 +78,7 @@
           appearance: none;
   background-color: transparent;
   border-radius: 500rem;
-  border: 0.2rem solid #df005d;
+  border: 0.2rem solid #9800df;
   position: relative;
   top: 0.1rem;
   padding: 0.5rem;
@@ -91,11 +95,11 @@
 }
 
 .card-container ul li div input[type=checkbox]:checked {
-  background-color: rgba(223, 0, 93, 0.5);
+  background-color: rgba(152, 0, 223, 0.5);
 }
 
 .card-container ul li div label {
-  color: #df005d;
+  color: #9800df;
   outline: none;
 }
 
@@ -103,7 +107,7 @@
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: #df005d;
+  color: #9800df;
   border: none;
   background: none;
   max-width: 5rem;

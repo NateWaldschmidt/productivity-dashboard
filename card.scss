@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
 
 .card-container {
-    $primary-color:   #df005d;
+    $primary-color:   #9800df;
     background-color: rgba($primary-color, 0.1);
     border-radius:    1rem;
     box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
@@ -11,7 +11,9 @@
     display:   flex;
     flex-flow: column wrap;
 
+    min-width: 15rem;
     max-width: 30rem;
+    height:    fit-content;
     padding:   1rem;
     margin:    1rem;
 
