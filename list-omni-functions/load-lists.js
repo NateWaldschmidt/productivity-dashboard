@@ -16,10 +16,7 @@ function loadLists() {
         }
     
         // Inserts the duplicate before all of the other cards.
-        document.querySelector("main").insertBefore(
-            DUPLICATE,
-            document.querySelector("main").children[0]
-        );
+        document.querySelector("main").append(DUPLICATE);
     }
 }
 
