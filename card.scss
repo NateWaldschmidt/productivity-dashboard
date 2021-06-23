@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
 
+$primary-card-color: #233D4D;
+$success-color:      rgb(10, 134, 21);
+$danger-color:       #D62246;
+
 .card-container {
-    $primary-color:   #233D4D;
-    background-color: rgba($primary-color, 0.1);
+    background-color: rgba($primary-card-color, 0.1);
     border-radius:    1rem;
-    box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
+    box-shadow:       5px 5px 15px rgba($primary-card-color, 0.07);
 
     font-family: 'Sarabun', sans-serif;
 
@@ -23,7 +26,7 @@
         justify-content: space-between;
 
         h3 {
-            color:           $primary-color;
+            color:           $primary-card-color;
             font-size:       1.5rem;
             font-weight:     800;
             text-transform:  uppercase;
@@ -32,14 +35,13 @@
         }
 
         .percent-completed {
-            $percentage-color: rgb(10, 134, 21);
-            color:   $percentage-color;
+            color:   $success-color;
             font-size: 0.9rem;
             text-align: center;
 
-            background-color: rgba($percentage-color, 0.15);
+            background-color: rgba($success-color, 0.15);
             border-radius:    .5rem;
-            border:           0.2rem solid $percentage-color;
+            border:           0.2rem solid $success-color;
 
             padding:    0 0.75rem 0.1rem;
             min-width: 3rem;
@@ -67,7 +69,7 @@
 
                     background-color: transparent;
                     border-radius:    500rem;
-                    border:           .2rem solid $primary-color;
+                    border:           .2rem solid $primary-card-color;
 
                     position:     relative;
                     top:          0.1rem;
@@ -83,19 +85,19 @@
                         filter: brightness(80%);
                     }
                     &:checked {
-                        background-color: rgba($primary-color, 0.5);
+                        background-color: rgba($primary-card-color, 0.5);
                     }
                 }
 
                 label {
-                    color:   $primary-color;
+                    color:   $primary-card-color;
                     cursor:  text;
                     outline: none;
                     flex-grow: 1;
                 }
 
                 .delete-button {
-                    color:    #D62246;
+                    color:    $danger-color;
                     position: relative;
                     top: 2px;
                 }
@@ -105,7 +107,7 @@
 
     button {
         align-self: center;
-        color:      $primary-color;
+        color:      $primary-card-color;
 
         border:     none;
         background: none;
