@@ -1,7 +1,6 @@
 function percentCompleted(cardChild) {
-    const CARD = cardChild.closest(".card-container");
-
-    const LIST_ITEMS = CARD.querySelectorAll("li");
+    const CARD = cardChild.closest(".card-container"); // Finds the card's container for future queries.
+    const LIST_ITEMS = CARD.querySelectorAll("li");    // Finds all <li> elements.
 
     let numChecked = 0; // Keeps track of the number checked.
 
