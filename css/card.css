@@ -1,9 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap");
 .card-container {
-  background-color: rgba(152, 0, 223, 0.1);
+  background-color: rgba(35, 61, 77, 0.1);
   border-radius: 1rem;
-  -webkit-box-shadow: 5px 5px 15px rgba(152, 0, 223, 0.07);
-          box-shadow: 5px 5px 15px rgba(152, 0, 223, 0.07);
+  -webkit-box-shadow: 5px 5px 15px rgba(35, 61, 77, 0.07);
+          box-shadow: 5px 5px 15px rgba(35, 61, 77, 0.07);
   font-family: 'Sarabun', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,7 +34,7 @@
 }
 
 .card-container div h3 {
-  color: #9800df;
+  color: #233D4D;
   font-size: 1.5rem;
   font-weight: 800;
   text-transform: uppercase;
@@ -78,11 +78,16 @@
           appearance: none;
   background-color: transparent;
   border-radius: 500rem;
-  border: 0.2rem solid #9800df;
+  border: 0.2rem solid #233D4D;
   position: relative;
   top: 0.1rem;
   padding: 0.5rem;
   margin-right: 0.5rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   -webkit-transition: background-color ease 300ms, -webkit-filter ease 200ms;
   transition: background-color ease 300ms, -webkit-filter ease 200ms;
   transition: background-color ease 300ms, filter ease 200ms;
@@ -95,23 +100,24 @@
 }
 
 .card-container ul li div input[type=checkbox]:checked {
-  background-color: rgba(152, 0, 223, 0.5);
+  background-color: rgba(35, 61, 77, 0.5);
 }
 
 .card-container ul li div label {
-  color: #9800df;
+  color: #233D4D;
+  cursor: text;
   outline: none;
 }
 
-.card-container .add-button {
+.card-container button {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  color: #9800df;
+  color: #233D4D;
   border: none;
   background: none;
   max-width: 5rem;
-  margin-right: auto;
+  cursor: pointer;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -122,9 +128,13 @@
   transition: filter ease 100ms, -webkit-filter ease 100ms;
 }
 
-.card-container .add-button:active {
+.card-container button:active {
   -webkit-filter: brightness(60%);
           filter: brightness(60%);
+}
+
+.card-container .add-button {
+  margin-right: auto;
 }
 
 .card-container * {

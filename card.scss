@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;500;800&display=swap');
 
 .card-container {
-    $primary-color:   #9800df;
+    $primary-color:   #233D4D;
     background-color: rgba($primary-color, 0.1);
     border-radius:    1rem;
     box-shadow:       5px 5px 15px rgba($primary-color, 0.07);
@@ -74,6 +74,9 @@
                     padding:      0.5rem;
                     margin-right: 0.5rem;
                     
+                    cursor:      pointer;
+                    user-select: none;
+                    
                     transition: background-color ease 300ms, filter ease 200ms;
 
                     &:active {
@@ -85,30 +88,36 @@
                 }
 
                 label {
-                    color: $primary-color;
+                    color:   $primary-color;
+                    cursor:  text;
                     outline: none;
                 }
             }
         }
     }
 
-    .add-button {
+    button {
         align-self: center;
         color:      $primary-color;
 
         border:     none;
         background: none;
 
-        max-width:    5rem;
-        margin-right: auto;
+        max-width: 5rem;
 
+        cursor: pointer;
         user-select: none;
 
         transition: filter ease 100ms;
 
+
         &:active {
             filter: brightness(60%);
         }
+    }
+
+    .add-button {
+        margin-right: auto;
     }
 
     * {
