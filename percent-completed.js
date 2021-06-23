@@ -12,51 +12,23 @@ function percentCompleted(cardChild) {
         }
     }
 
-    // Formats to no decimals and added a "%" symbol.
-    CARD.querySelector(".percent-completed").innerText = (numChecked / LIST_ITEMS.length * 100).toFixed(0) + "%";
-}
-
-// Finds cards with percent-completed elements.
-for (let percentCard of document.querySelectorAll(".percent-completed")) {
-    percentCard = percentCard.closest(".card-container"); // Gets the parent card <div>.
-
-    const LIST_ITEMS = percentCard.querySelectorAll("li");
-
-    // Adds the percentCompleted function to each of the elements.
-    for (item of LIST_ITEMS) {
-        item.addEventListener("input", function() { percentCompleted(percentCard); });
-    }
-}
-
-// Adds handlers to checkboxes.
-{
-    const TEMPLATE_LI_CB = document.getElementById("template-li-general").content.querySelector("input[type=checkbox]");
-    if (TEMPLATE_LI_CB.getAttribute("oninput") != null) {
-        TEMPLATE_LI_CB.setAttribute(
-            "oninput",
-            TEMPLATE_LI_CB.getAttribute("oninput") + "; percentCompleted(this);"
-        );
+    // Formats the percentage string for displaying.
+    if (LIST_ITEMS.length == 0) {
+        CARD.querySelector(".percent-completed").innerText = "0%";
     } else {
-        TEMPLATE_LI_CB.setAttribute(
-            "oninput",
-            "percentCompleted(this)"
-        );
+        CARD.querySelector(".percent-completed").innerText = (numChecked / LIST_ITEMS.length * 100).toFixed(0) + "%";
     }
 }
 
-// Adds handlers when an add button is clicked.
 {
-    const TEMPLATE_ADD_BUTTON = document.getElementById("template-list-general").content.querySelector(".add-button");
-    if (TEMPLATE_ADD_BUTTON.getAttribute("onclick") != null) {
-        TEMPLATE_ADD_BUTTON.setAttribute(
-            "onclick",
-            TEMPLATE_ADD_BUTTON.getAttribute("onclick") + "; percentCompleted(this);"
-        );
-    } else {
-        TEMPLATE_ADD_BUTTON.setAttribute(
-            "onclick",
-            "percentCompleted(this)"
-        );
+    // Queries for the template.
+    const TEMPLATE     = document.getElementById("template-list-general");
+    const PERCENT_CARD = TEMPLATE.content.querySelector(".percent-completed");
+
+    // Ensures that the card has a percent-completed piece.
+    if (PERCENT_CARD != null) {
+        // Adds the attribute to the entire card.
+        const CARD = TEMPLATE.content.querySelector(".card-container");
+        CARD.setAttribute("onclick", "percentCompleted(this)");
     }
 }
-
