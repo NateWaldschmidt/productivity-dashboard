@@ -21,15 +21,12 @@
 </head>
 <body>
     <header>
-        <button id="add-general-list">
-            Add New General List
-        </button>
         <div id="main-title">
             <h2>Productivity Dashboard</h2>
             <p>Nathaniel Waldschmidt</p>
         </div>
-        <button id="add-ordered-list">
-            Add New Priority List
+        <button id="add-general-list">
+            Add New General List
         </button>
     </header>
 
@@ -38,8 +35,8 @@
         <template id="template-li-general">
             <li>
                 <div>
-                    <input type="checkbox">
-                    <label contenteditable>Additional Item</label>
+                    <input class="li-checkbox" type="checkbox">
+                    <label class="li-label" contenteditable>Additional Item</label>
                     <button class="delete-button">
                         <span class="material-icons-round">
                             delete_forever
@@ -53,8 +50,8 @@
         <template id="template-list-general">
             <div class="card-container general-list">
                 <div>
-                    <h3 contenteditable="">
-                        Card Title
+                    <h3 class="list-title" contenteditable="">
+                        List Title
                     </h3>
                     <button class="edit-button">
                         <span class="material-icons-round">
@@ -74,25 +71,6 @@
                 <ul></ul>
             </div>
         </template>
-
-        <!-- Template for a priority list INCOMPLETE-->
-        <template id="template-list-priority">
-            <div class="card-container priority-list">
-                <div>
-                    <h3></h3>
-                    <button class="add-button">
-                        <span class="material-icons-round">
-                            add
-                        </span>
-                    </button>
-                    <h4 class="percent-completed">
-                        0%
-                    </h4>
-                </div>
-
-                <ol></ol>
-            </div>
-        </template>
     </main>
 
     <footer></footer>
@@ -109,6 +87,12 @@
 <!-- Adds functionality to Percent Completed Elements -->
 <script src="list-omni-functions/percent-completed.js"></script>
 
+<!-- Adds the Class for Saving Data -->
+<script src="list-omni-functions/class-list.js"></script>
+
 <!-- Adds functionality to Save Lists -->
 <script src="list-omni-functions/store-lists.js"></script>
+
+<!-- Adds functionality to Load Saved Lists -->
+<script src="list-omni-functions/load-lists.js"></script>
 </html>
