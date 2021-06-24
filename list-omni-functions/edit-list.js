@@ -5,8 +5,10 @@ function editList(editButton) {
     for(let deleteButton of DELETE_BUTTONS) {
         if (deleteButton.style.opacity == 1) {
             deleteButton.style.opacity = 0;
+            deleteButton.disabled      = true;
         } else if (deleteButton.style.opacity == 0) {
             deleteButton.style.opacity = 1;
+            deleteButton.disabled      = false;
         }
     }
 }
