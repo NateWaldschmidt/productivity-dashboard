@@ -3,7 +3,11 @@ function editList(editButton) {
 
     const DELETE_BUTTONS = CARD.querySelectorAll(".delete-button"); // Queries all delete buttons in this card.
     for(let deleteButton of DELETE_BUTTONS) {
-        deleteButton.hidden = !deleteButton.hidden; // Toggles if it is hidden.
+        if (deleteButton.style.opacity == 1) {
+            deleteButton.style.opacity = 0;
+        } else if (deleteButton.style.opacity == 0) {
+            deleteButton.style.opacity = 1;
+        }
     }
 }
 
